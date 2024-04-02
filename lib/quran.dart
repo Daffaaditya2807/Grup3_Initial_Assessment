@@ -2,47 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Quran extends StatelessWidget {
-  final List<String> ayatList = [
-    'بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ',
-    'الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ',
-    'الرَّحْمٰنِ الرَّحِيْمِ',
-    'مَالِكِ يَوْمِ الدِّيْنِ',
-    'اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُ',
-    'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ',
-    'صِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّالِّيْنَ'
-  ];
-
-  final List<String> translationList = [
-    'In the name of Allah, the Most Gracious, the Most Merciful.',
-    'All praises and thanks be to Allah, the Lord of all that exists.',
-    'The Most Gracious, the Most Merciful.',
-    'The Owner of the Day of Judgment.',
-    'You alone we worship, and You alone we ask for help.',
-    'Guide us on the Straight Path,',
-    'the path of those who have received Your grace; not the path of those who have brought down wrath upon themselves, nor of those who have gone astray.'
-  ];
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-            onPressed: () {}, icon: const Icon(CupertinoIcons.arrow_left)),
-        title: const Text(
-          'Al-Fatiah',
-          style: TextStyle(
-            color: Color(0xFF672CBC),
-            fontSize: 20,
-            fontFamily: 'Poppins',
-            fontWeight: FontWeight.w700,
-            height: 0,
-          ),
-        ),
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(CupertinoIcons.search))
-        ],
-      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -50,19 +13,21 @@ class Quran extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             children: [
+              // Text Assalamualaikum Umar & Jam Lokasi
+              //
+              //
+              //...............
+
+              // Halaman Surah
+              //
+              //
+              //..................
+
+              //Container Surah dan text
               const SizedBox(
                 height: 20,
               ),
               ContainerSurah(),
-              ListView.builder(
-                itemCount: ayatList.length,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) {
-                  return ayatQuran(index + 1, ayatList[index],
-                      translationList[index], context);
-                },
-              )
             ],
           ),
         ),
