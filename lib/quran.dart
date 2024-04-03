@@ -1,14 +1,20 @@
-// import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:ui' as ui;
 
 class Quran extends StatelessWidget {
   const Quran({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(), // Tugas Daei Mario
+        appBar: AppBar(
+          leading: IconButton(
+              onPressed: () {}, icon: const Icon(CupertinoIcons.arrow_left)),
+          actions: [
+            IconButton(
+                onPressed: () {}, icon: const Icon(CupertinoIcons.search))
+          ],
+        ), // Tugas Daei Mario
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -205,7 +211,7 @@ class Quran extends StatelessWidget {
                     ]),
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xFFDF98FA).withOpacity(0.5),
+                    color: Color.fromRGBO(174, 213, 129, 1).withOpacity(0.5),
                     spreadRadius: 3,
                     blurRadius: 7,
                     offset: Offset(4, 2), // changes position of shadow
@@ -219,7 +225,7 @@ class Quran extends StatelessWidget {
                   height: 10,
                 ),
                 const Text(
-                  'Al-Fatiah',
+                  'Al-Fatihah',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
@@ -233,7 +239,7 @@ class Quran extends StatelessWidget {
                   height: 10,
                 ),
                 const Text(
-                  'The Opening',
+                  'Pembukaan',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
@@ -271,7 +277,7 @@ class Quran extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       const Text(
-                        'MECCAN',
+                        'MAKKIYAH',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
@@ -291,7 +297,7 @@ class Quran extends StatelessWidget {
                       ),
                       const SizedBox(width: 5),
                       const Text(
-                        '7 VERSES',
+                        '7 AYAT',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 14,
