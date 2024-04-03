@@ -319,12 +319,15 @@ class Quran extends StatelessWidget {
             // ============== batas code Keyla ==========================
           ),
         ),
-        Opacity(
-          opacity: 0.3,
-          child: Image.asset(
-            "assets/Quran.png",
-            width: 250,
-            height: 150,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: Opacity(
+            opacity: 0.3,
+            child: Image.asset(
+              "assets/Quran.png",
+              width: 250,
+              height: 150,
+            ),
           ),
         )
       ],
