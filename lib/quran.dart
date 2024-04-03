@@ -118,7 +118,7 @@ class Quran extends StatelessWidget {
                   height: 15,
                 ),
                 //Halaman -> Desca
-
+                ContainerHalaman(),
                 // ============== batas code Desca ==========================
                 const SizedBox(
                   height: 15,
@@ -129,6 +129,60 @@ class Quran extends StatelessWidget {
           ),
         ));
   }
+
+  // ============== code Desca ==========================
+  Widget ContainerHalaman() {
+    return Stack(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: Container(
+            width: double.infinity,
+            height: 63,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              gradient: LinearGradient(
+                begin: Alignment(0.71, -0.71),
+                end: Alignment(-0.7, 0.71),
+                colors: [
+                  Color.fromRGBO(14, 109, 94, 1),
+                  Color.fromRGBO(174, 213, 129, 1),
+                ],
+              ),
+            ),
+            child: Align(
+              alignment: Alignment.center,
+              child: Container(
+                // padding: EdgeInsets.all(10),
+                width: 90,
+                height: 32,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 1,
+                  ),
+                ),
+                child: Center(
+                  child: const Text(
+                    'Halaman 1',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+// ============== batas code Desca ==========================
 
   Widget ContainerSurah() {
     return Stack(
