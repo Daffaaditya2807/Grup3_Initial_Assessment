@@ -16,7 +16,6 @@ import 'package:google_fonts/google_fonts.dart';
 //             children: [
 class Quran extends StatelessWidget {
   const Quran({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,12 +26,105 @@ class Quran extends StatelessWidget {
 //..................
           ),
       body: SafeArea(
+      body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               // teks di kiri
+              // Text Assalamualaikum Umar & Jam Lokasi
+              //
+              //
+              //...............
+
+              // Halaman Surah
+              //
+              //
+              //..................
+
+              //Container Surah dan text
+              const SizedBox(
+                height: 20,
+              ),
+              ContainerSurah(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget ContainerSurah() {
+    return Stack(
+      alignment: Alignment.bottomRight,
+      children: [
+        Container(
+          width: double.infinity,
+          clipBehavior: Clip.antiAlias,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              gradient: const LinearGradient(
+                  begin: Alignment(0.71, -0.71),
+                  end: Alignment(-0.71, 0.71),
+                  colors: [Color(0xFFDF98FA), Color(0xFF9055FF)]),
+              boxShadow: [
+                BoxShadow(
+                  color: Color(0xFFDF98FA).withOpacity(0.5),
+                  spreadRadius: 3,
+                  blurRadius: 7,
+                  offset: Offset(4, 2), // changes position of shadow
+                ),
+              ]),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'Al-Fatiah',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 26,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w400,
+                  height: 0,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                'The Opening',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w400,
+                  height: 0,
+                ),
+              ),
+              const SizedBox(
+                height: 15.0,
+              ),
+              Container(
+                width: 200,
+                decoration: ShapeDecoration(
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(
+                      width: 1,
+                      strokeAlign: BorderSide.strokeAlignCenter,
+                      color: Colors.white.withOpacity(0.3499999940395355),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 15.0,
+              ),
               Container(
                 margin: const EdgeInsets.only(top: 20), // teks dengan app bar
                 child: Column(
